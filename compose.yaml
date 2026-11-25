@@ -1,0 +1,6 @@
+services:
+  benchmark:
+    build: .
+    command: python -m benchmark.reproduce
+    volumes:
+      - ./reproduced-results:/workspace/results

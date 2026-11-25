@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the software and its original data sources."
+title: "Yeast Structure Benchmark: AlphaFold and experimental PGK1"
+type: software
+authors:
+  - given-names: Rodrigo Salvador
+    family-names: Ventura Cruz
+repository-code: "https://github.com/rodrigo790/yeast-structure-benchmark"
+version: 0.1.0

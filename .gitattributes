@@ -1,0 +1,4 @@
+data/*.json text eol=lf
+data/raw/* -text
+results/*.csv text eol=lf
+results/*.json text eol=lf

@@ -1,0 +1,15 @@
+name: Reproducibility
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  snapshot-and-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the fixed environment
+        run: docker build -t yeast-structure-benchmark .
+      - name: Validate the comparison offline
+        run: docker run --rm --network none yeast-structure-benchmark
+      - name: Regenerate all analysis outputs offline
+        run: docker run --rm --network none yeast-structure-benchmark python -m benchmark.reproduce
